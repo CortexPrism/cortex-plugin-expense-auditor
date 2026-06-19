@@ -1,0 +1,30 @@
+{
+  "name": "cortex-plugin-expense-auditor",
+  "version": "1.0.0",
+  "description": "Expense Report Auditor — Brex/Ramp/Expensify/Concur integration for auto-auditing receipts and flagging policy violations",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-expense-auditor",
+  "homepage": "https://cortexprism.io/marketplace/plugins/expense-auditor",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    {
+      "name": "expense_audit_report",
+      "description": "Audit expense report against policy",
+      "params": []
+    },
+    { "name": "expense_list_violations", "description": "List policy violations", "params": [] },
+    {
+      "name": "expense_generate_report",
+      "description": "Generate monthly spend analytics",
+      "params": []
+    },
+    { "name": "expense_approve", "description": "Auto-approve compliant reports", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
